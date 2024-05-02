@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Example</title>
-</head>
-<body>
-    <video width="750" height="500" controls>
-        <source src="video.mp4" type="video/mp4">
-        "Your browser does not support the video tag."
-    </video>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vianna Invitation</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: radial-gradient(circle, #e3cbfd, #f76ac8);
+        font-family: "Montserrat", sans-serif; /* Adjusted for overall font */
+      }
+      .video-invitation video,
+      .map-location iframe {
+        width: 100%;
+        height: 450px;
+        border: solid 1px #ccc;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.8);
+      }
+      @keyframes popIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        60% {
+          transform: scale(1.1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      h1 {
+        animation: popIn 1s ease-out;
+        font-size: 48px;
+        color: #ffffff;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        font-family: "Dancing Script", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center mb-4">YOU'RE INVITED !</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-body">
+              <!-- Video Invitation -->
+              <div class="video-invitation mb-4">
+                <video controls autoplay>
+                  <source src="video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <!-- Map Location -->
+              <div class="map-location">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.3208611477103!2d120.85591297592428!3d14.408657981745588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33962d4792ee4c9d%3A0xf5813a579bb1826b!2sBistro%2099!5e0!3m2!1sen!2sph!4v1714636220010!5m2!1sen!2sph"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
